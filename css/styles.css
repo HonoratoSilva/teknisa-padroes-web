@@ -67,7 +67,7 @@ section > div:not(:first-child) {
     align-items: flex-start;
     padding: 0px;
     overflow: hidden;
-    max-width: 359px;
+    max-width: 339.25px;
     height: 114px;
     left: 0px;
     top: 0px;
@@ -79,7 +79,6 @@ section > div:not(:first-child) {
     margin: 12px;
     background-color: white;
 }
-
 .invisible {
     display: none;
 }
@@ -104,8 +103,96 @@ section > div:not(:first-child) {
 }
 
 h3 {
-    color: #333;
-    flex: none;
+    color: #333333;
+    flex:none;
     margin: 0px;
 }
 
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: white;
+    width: 60%;
+    min-width: 300px;
+    padding: 40px;
+    box-shadow: 0 4px 4px white;
+    position: relative;
+    display: flex;
+    line-height: 180%;
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+.fechar {
+    position: absolute;
+    font-size: 1.2em;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: none;
+    color: #777777;
+    cursor: pointer;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+   to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.mostrar .modal {
+    animation: modal 0.3s;
+}
+
+.modal > span {
+    display: inline-flex;
+    font-size: 16px;
+ }
+ .modal > a {
+    display: inline-flex;
+    font-size: 16px;
+ }
+ .profileDescriptionModal {
+    margin: Opx 10px;
+ }
+
+ .modal .languages {
+    display: flex;
+    flex-direction: column;
+}
+.modal .languageDescription {
+    display: flex;
+    flex-direction: row;
+}
+.modal .modal-experience {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.modal .profileDescriptionModal > div > h3 { 
+    margin-top: 10px;
+}
+
+*[name="age"]::after{
+    content: "Anos";
+}

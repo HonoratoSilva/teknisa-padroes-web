@@ -2,22 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Honorato Nascimento"/>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title> Padrões Web </title>
+    <meta name="author" content="Honorato Silva"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>Padrões Web</title>
 </head>
+
 <body onload="preRender()">
+
     <header>
         <h1>Desenvolvedores</h1>
+
         <section>
+
             <div id="name">
-                <label>Por Nome:</label>
-                <input id="nameSearch" placeholder="Digite Aqui..." type="text" oninput="filter()"/>
+                <label>Por nome:</label>
+                <input id="nameSearch" placeholder="Digite aqui..." type="text" oninput="filter()"/>
             </div>
+
             <div id="language">
-                <label>Por Linguagem:</label>
+                <label>Por linguagem:</label>
                 <div id="condition">
                     <label>
                         <input id="1" type="radio" name="option" onchange="filter()" checked/>
@@ -29,6 +33,7 @@
                     </label>
                 </div>
             </div>
+
             <div id="languageOptions">
                 <label>
                     <input id="java" name="java" type="checkbox" onchange="filter()" checked/>
@@ -40,25 +45,29 @@
                 </label>
                 <label>
                     <input id="php" name="php" type="checkbox" onchange="filter()" checked/>
-                    <span>php</span>
+                    <span>PHP</span>
                 </label>
                 <label>
                     <input id="python" name="python" type="checkbox" onchange="filter()" checked/>
                     <span>Python</span>
                 </label>
             </div>
+
         </section>
+
     </header>
 
     <section class="result">
+
         <div class="countResults">
             <span id="countResult"></span>
             <span>Resultados</span>
         </div>
+
         <div class="container">
             <div class="card" id="36392ffd-052e-41cf-a3f5-e574bef212b2">
                 <div class="profilePicture">
-                    <img class="image" src="./images/36392ffd-052e-41cf-a3f5-e574bef212b2.jpg" alt="desenvolvedor"/>
+                    <img class="image" src="images/36392ffd-052e-41cf-a3f5-e574bef212b2.jpg" alt="desenvolvedor"/>
                 </div>
                 <div class="profileDescription">
                     <div class="info">
@@ -590,8 +599,11 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <script src="./js/app.js"></script>
+    </section>
+    <div id="modal-profile" class="modal-container">
+    </div>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
